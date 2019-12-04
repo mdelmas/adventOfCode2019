@@ -4,6 +4,7 @@ def neverDecrease(n):
         if i > j:
             return False
     return True
+    # return all(int(a[x])<=int(a[x+1]) for x in range(len(a)-1))  
 
 def hasTwoAdjacents(n):
     num = [int(x) for x in str(n)]
