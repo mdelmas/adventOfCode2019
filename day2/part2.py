@@ -1,5 +1,6 @@
 from itertools import product
 
+
 def runIntcodeProgram(program, noun, verb):
     program[1] = noun
     program[2] = verb
@@ -17,14 +18,13 @@ def runIntcodeProgram(program, noun, verb):
     return program[0]
 
 
-
-
 for noun, verb in product(range(1, 100), range(1, 100)):
     program = [int(x) for x in open("./input").readlines()[0].split(',')]
     result = runIntcodeProgram(program, noun, verb)
     print(result)
     if result == 19690720:
         break
+
 
 print("noun = " + str(noun))
 print("verb = " + str(verb))
